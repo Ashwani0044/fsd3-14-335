@@ -1,9 +1,10 @@
 import http from 'http'
 import * as t from './exp2/teams.js'
+import parseUrl from 'url'
 
 const sendJSON = (res, statusCode, data) => {
     res.writeHead(statusCode, { "content-type": "application/json"})
-    res.end(data === "indefined" ? "":JSON.stringify(data))
+    res.end(data === "undefined" ? "":JSON.stringify(data))
 }
 
 const parseJSONBody = (req) => {
@@ -31,6 +32,21 @@ const server = http.createServer((req,res) => {
     // } else {
     //     res.statusCode = 404
     // }
+
+    const { pathname, query } = parseUrl(req.url, true)
+    const { method } = req
+    console.log('pathname: ', pathname)
+    console.log('query: ', query)
+    console.log('Method: ', method)
+
+    if(pathname === '/api/vi/teams' && method === 'GET') {
+        const{ total } = query
+        let teams = t.getAllTeams()
+        return sendJSON(res, 200, teams)
+    } else {
+        res.statusCode = 404
+        res.end()
+    }
 })
 
 server.listen(5000, ()=>{console.log("SIH server is running on http://localhost:5000")})
