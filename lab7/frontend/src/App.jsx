@@ -23,8 +23,8 @@ function Book() {
 export default function App() {
   return (
     <>
+      <h1>....BOOK STORE....</h1>
       <Book />
-      <h1>Hello React</h1>
       <Book />
       <Book />
       <Book />
