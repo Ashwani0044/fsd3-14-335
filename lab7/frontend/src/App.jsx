@@ -17,12 +17,13 @@ const b2 = {
 
 function Book({ book }) {
   return (
-    <div>
+    <div className="book">
       <h1>{book.bname}</h1>
       <img src={book.picUrl} alt="React_Book" />
       <h2>Price: {book.price}</h2>
       <h3>Quantity: {book.quantity}</h3>
       <h2>Rating: {book.rating}</h2>
+      <button type="submit">Buy Now</button>
     </div>
   )
 }
@@ -30,11 +31,13 @@ function Book({ book }) {
 export default function App() {
   return (
     <>
-      <h1>........BOOK STORE........</h1>
-      <Book book={b1}/>
-      <Book book={b2}/>
-      <Book book={b1}/>
-      <Book book={b2}/>
+      <h1>........ONLINE BOOK STORE........</h1>
+      <div className="container">
+        <Book book={b1}/>
+        <Book book={b2}/>
+        <Book book={b1}/>
+        <Book book={b2}/>
+      </div>
     </>
   )
 }
