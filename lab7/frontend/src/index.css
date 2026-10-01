@@ -10,23 +10,29 @@ h1 {
 }
 
 .container {
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  box-shadow: 0px 0px 10px 10px rgb(240, 238, 238);
   margin: 10px 10px;
   display: flex;
   /* flex-direction: column; */
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background-color: beige;
+  background-color: rgb(230, 230, 180);
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 16px;
 }
 
 .book {
   padding: 20px;
   margin: 20px;
   background-color: rgb(209, 255, 196);
-  box-shadow: 0px 0px 5px 10px rgb(176, 176, 176);
+  box-shadow: 0px 5px 8px 8px rgb(176, 176, 176);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; 
+  flex-direction: column;
 }
 
 .book h1 {

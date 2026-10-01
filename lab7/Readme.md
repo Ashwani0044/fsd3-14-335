@@ -21,3 +21,12 @@
 2. it must start with Cap letter
 3. it should be treated as html tag
 4. it must be closed
+
+## Object Destructor
+1. const {bname, price, quantity, rating, picUrl} = props.book
+Does not depend on order, if property is not available then it initializes with null
+
+2. Any component including style
+a. External css - import "./index.css"
+b. Internal css - style={objectName}
+c. Inline css - style={{color:"red"}}
