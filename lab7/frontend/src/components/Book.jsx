@@ -1,3 +1,4 @@
+
 export default function Book({ book }) {
     const qtyStyle = {
       fontSize:"1.2rem",

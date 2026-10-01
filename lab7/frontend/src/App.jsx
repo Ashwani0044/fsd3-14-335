@@ -1,4 +1,5 @@
 import Book from "./components/Book";
+import Pen from "./components/Pen";
 
 const b1 = {
   picUrl: "https://m.media-amazon.com/images/I/81t9cbIICUL._AC_UL480_FMwebp_QL65_.jpg",
@@ -16,7 +17,17 @@ const b2 = {
   rating: 4.6,
 };
 
-<Book />
+const p1 = {
+  picUrl: "https://m.media-amazon.com/images/I/51vhSCJlpnL._SX522_.jpg",
+  company: "MontBlane",
+  price: 11050,
+};
+
+const p2 = {
+  picUrl: "https://m.media-amazon.com/images/I/61LcfXrT4kL._SX522_.jpg",
+  company: "Pierre Cardin",
+  price: 570,
+};
 
 export default function App() {
   return (
@@ -27,6 +38,8 @@ export default function App() {
         <Book book={b2}/>
         <Book book={b1}/>
         <Book book={b2}/>
+        <Pen pen={p1}/>
+        <Pen pen={p2}/>
       </div>
     </>
   )
