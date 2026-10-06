@@ -6,7 +6,7 @@
 
 h1 {
   text-align: center;
-  font-size: 2 rem;
+  font-size: 2rem;
 }
 
 .container {
@@ -35,19 +35,90 @@ h1 {
   flex-direction: column;
 }
 
-.book h1 {
+.book-title {
   font-size: 1.5rem;
 }
 
-.book img {
+.book-image {
   height: 300px;
   object-fit: cover;
 }
 
-.book button {
+.book-price,
+.book-quantity,
+.book-rating {
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.book-price {
+  color: white;
+  background-color: red;
+}
+
+.book-quantity {
+  color: black;
+  background-color: yellow;
+}
+
+.book-rating {
+  color: blue;
+  background-color: gray;
+}
+
+.book-button {
   padding: 5px 10px;
   background-color: green;
   color: white;
   border: none;
   border-radius: 10px;
+}
+
+.pen {
+  width: 220px;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgb(209, 255, 196);
+  box-shadow: 0px 5px 8px 8px rgb(176, 176, 176);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pen-image {
+  max-width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+
+.pen-company {
+  margin-top: 10px;
+}
+
+.pen-price {
+  margin-top: 5px;
+}
+
+.fruit-list {
+  padding: 20px 40px;
+  margin: 20px;
+  background-color: white;
+  box-shadow: 0px 5px 8px 8px rgb(176, 176, 176);
+  border-radius: 10px;
+}
+
+.fruit-item {
+  padding: 5px 0;
+}
+
+.fruit {
+  color: red;
+}
+
+.vegetable {
+  color: brown;
 }

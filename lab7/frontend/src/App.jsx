@@ -35,7 +35,7 @@ import Fruit from "./components/Fruit";
 export default function App() {
   return (
     <>
-      <h1>........ONLINE BOOK STORE........</h1>
+      <h1>........ONLINE STORE........</h1>
       <div className="container">
         <Book book={b1}/>
         <Book book={b2}/>

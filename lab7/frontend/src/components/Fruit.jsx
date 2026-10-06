@@ -6,12 +6,19 @@ const products = [
     {title:"Apple", id: 4, isFruit: true},
 ];
 
-const ListItem = products.map((item) => <li key={item.id}>{item.title}</li>)
-
-console.log(ListItem)
-
 function Fruit() {
-  return <ul>{ListItem}</ul>
+  return (
+    <ul className="fruit-list">
+      {products.map((item) => (
+        <li
+          className={item.isFruit ? "fruit-item fruit" : "fruit-item vegetable"}
+          key={item.id}
+        >
+          {item.title}
+        </li>
+      ))}
+    </ul>
+  )
 }
 
 export default Fruit
