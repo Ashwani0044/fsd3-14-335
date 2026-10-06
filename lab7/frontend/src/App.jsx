@@ -2,6 +2,7 @@ import Book from "./components/Book";
 import Pen from "./components/Pen";
 import {b1, b2} from "./data/book";
 import {p1, p2} from "./data/pen";
+import Fruit from "./components/Fruit";
 
 // const b1 = {
 //   picUrl: "https://m.media-amazon.com/images/I/81t9cbIICUL._AC_UL480_FMwebp_QL65_.jpg",
@@ -42,6 +43,7 @@ export default function App() {
         <Book book={b2}/>
         <Pen pen={p1}/>
         <Pen pen={p2}/>
+        <Fruit />
       </div>
     </>
   )
