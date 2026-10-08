@@ -35,18 +35,45 @@ import Event from "./components/Event";
 
 export default function App() {
   return (
-    <>
-      <h1>........ONLINE STORE........</h1>
-      <div className="container">
-        <Book book={b1}/>
-        <Book book={b2}/>
-        <Book book={b1}/>
-        <Book book={b2}/>
-        <Pen pen={p1}/>
-        <Pen pen={p2}/>
-        <Fruit />
-        <Event />
-      </div>
-    </>
+    <div className="min-h-screen bg-[#f5efe6] text-[#3b261d]">
+      <header className="overflow-hidden bg-[#3b261d] text-[#fffaf2]">
+        <div className="mx-auto max-w-7xl px-6 py-12 sm:px-10 sm:py-16">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#d6a77b]">
+            Thoughtfully picked for you
+          </p>
+          <h1 className="text-4xl font-black tracking-tight sm:text-6xl">
+            The Daily Grind <span className="text-[#d6a77b]">Market</span>
+          </h1>
+          <p className="mt-4 max-w-xl text-base leading-7 text-[#eadfd2] sm:text-lg">
+            A little something for your reading nook, your desk, and your everyday.
+          </p>
+        </div>
+      </header>
+
+      <main className="mx-auto max-w-7xl px-6 py-10 sm:px-10 sm:py-14">
+        <div className="mb-7 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#9b6746]">
+              The good things
+            </p>
+            <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">
+              A few favorites
+            </h2>
+          </div>
+          <p className="text-sm text-[#806b5d]">Made for slow mornings and good ideas.</p>
+        </div>
+
+        <div className="grid grid-cols-1 items-stretch gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          <Book book={b1} />
+          <Book book={b2} />
+          <Book book={b1} />
+          <Book book={b2} />
+          <Pen pen={p1} />
+          <Pen pen={p2} />
+          <Fruit />
+          <Event />
+        </div>
+      </main>
+    </div>
   )
 }
