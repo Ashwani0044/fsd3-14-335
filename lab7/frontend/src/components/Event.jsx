@@ -1,9 +1,17 @@
 
 const Button = () => {
+    let count = 0;
+
     const handleClick = () => {
         alert("Button Clicked!!")
     }
+
+    const handleSubmit = () => {
+      count++;
+      alert("count is increased to ", count);
+    }
     return (
+      <>
         <button
           className="rounded-xl bg-[#6f4430] px-5 py-3 font-semibold text-[#fffaf2] transition hover:bg-[#4b2e23] focus:outline-none focus:ring-2 focus:ring-[#b7794b] focus:ring-offset-2"
           onClick={handleClick}
@@ -11,6 +19,15 @@ const Button = () => {
         >
           Click Me
         </button>
+
+        <button
+        className="rounded-xl bg-[#6f4430] px-5 py-3 font-semibold text-[#fffaf2] transition hover:bg-[#4b2e23] focus:outline-none focus:ring-2 focus:ring-[#b7794b] focus:ring-offset-2"
+        onClick={handleClick}
+        type="button"
+        >
+        
+        </button>
+      </>
     )
 }
 
